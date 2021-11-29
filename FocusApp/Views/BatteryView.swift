@@ -8,19 +8,43 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var batteryState = 50
+//    func numberAvailable() { ForEach(0 ..< 100) {_ in
+//        batteryState % 5 == 0
+//            }
+//    }
+    
     var body: some View {
         VStack {
             
             ScrollView {
-                
+                VStack {
+                    Picker(selection: $batteryState,
+                           label: Text("Picker Name"),
+                           content: {
+
+
+                    })
+                        .pickerStyle(WheelPickerStyle())
+                    
+                    Text("About the battery")
+                    VStack {
+                    Image("charge")
+                            .resizable()
+                            .scaledToFit()
+                            .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+                            .padding(10)
+                    
+                    }
+                }
             }
             
             //fixed footer
             VStack {
                 Spacer()
                 Divider()
-                    .frame(height: 10)
                     .padding(.bottom, 10)
+                    .frame(height: 10)
                 HStack(alignment: .bottom, spacing: 55) {
                     Image(systemName:"timer")
                         .resizable()
