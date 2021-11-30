@@ -16,11 +16,35 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
+            //fixed header
+                VStack(alignment: .center) {
+                    Text("battery".capitalized(with: .current))
+                        .bold()
+                        .italic()
+                        .font(.title2)
+                }
             
             ScrollView {
+                
                 ZStack {
-                    Color.orange.opacity(0.2)
+                    
+                    //background color
+                    Color.orange.opacity(0.3)
+                    
                     VStack {
+                        //title
+                        HStack {
+                            VStack(alignment: .leading){
+                                Text("charging reminder".capitalized(with: .current))
+                                    .bold()
+                                    .italic()
+                                    .font(.title2)
+                                    .padding(.leading, 20)
+                            }
+                            Spacer()
+                        }
+                        
+                        //percentage picker
                         Picker(selection: $batteryState,
                                label: Text("Picker Name"),
                                content: {
@@ -32,7 +56,7 @@ struct ContentView: View {
                         //information section
                         HStack {
                             VStack(alignment: .leading){
-                                Text("About the battery".capitalized(with: .current))
+                                Text("about batteries".capitalized(with: .current))
                                     .bold()
                                     .italic()
                                     .font(.title2)
@@ -82,7 +106,6 @@ struct ContentView: View {
             VStack {
                 Divider()
                     .padding(.bottom, 10)
-                    .frame(height: 10)
                 HStack(alignment: .bottom, spacing: 55) {
                     Image(systemName:"timer")
                         .resizable()
@@ -101,7 +124,7 @@ struct ContentView: View {
                         .foregroundColor(Color.teal)
                 }
             }
-            .background(Color.yellow.opacity(0.3))
+            .background(Color.white.opacity(0.3))
             .edgesIgnoringSafeArea(.bottom)
         }
     }

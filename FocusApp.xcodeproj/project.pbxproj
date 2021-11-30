@@ -11,6 +11,8 @@
 		5AF4A274275560BE005FB606 /* BatteryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4A273275560BE005FB606 /* BatteryView.swift */; };
 		5AF4A276275560C3005FB606 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AF4A275275560C3005FB606 /* Assets.xcassets */; };
 		5AF4A279275560C3005FB606 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AF4A278275560C3005FB606 /* Preview Assets.xcassets */; };
+		5AF4A2842755B7C0005FB606 /* FirstArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4A2832755B7BF005FB606 /* FirstArticleView.swift */; };
+		5AF4A2862755B7DE005FB606 /* SecondArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4A2852755B7DE005FB606 /* SecondArticleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		5AF4A273275560BE005FB606 /* BatteryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryView.swift; sourceTree = "<group>"; };
 		5AF4A275275560C3005FB606 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5AF4A278275560C3005FB606 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5AF4A2832755B7BF005FB606 /* FirstArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstArticleView.swift; sourceTree = "<group>"; };
+		5AF4A2852755B7DE005FB606 /* SecondArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondArticleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 			isa = PBXGroup;
 			children = (
 				5AF4A273275560BE005FB606 /* BatteryView.swift */,
+				5AF4A2832755B7BF005FB606 /* FirstArticleView.swift */,
+				5AF4A2852755B7DE005FB606 /* SecondArticleView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -153,6 +159,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AF4A2842755B7C0005FB606 /* FirstArticleView.swift in Sources */,
+				5AF4A2862755B7DE005FB606 /* SecondArticleView.swift in Sources */,
 				5AF4A274275560BE005FB606 /* BatteryView.swift in Sources */,
 				5AF4A272275560BE005FB606 /* FocusAppApp.swift in Sources */,
 			);
