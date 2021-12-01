@@ -10,21 +10,31 @@ import SwiftUI
 struct FirstArticleView: View {
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 20) {
-            Text("Avoid extreme ambient temperatures.")
+            VStack(alignment: .leading, spacing: 10) {
+                VStack(alignment: .leading, spacing: 10) {
+                Text("Avoid extreme ambient temperatures.")
                     .bold()
                     .font(.title2)
-                    
-            Text("""
-Your device is designed to perform well in a wide range of ambient temperatures, with 62° to 72° F (16° to 22° C) as the ideal comfort zone. It’s especially important to avoid exposing your device to ambient temperatures higher than 95° F (35° C), which can permanently damage battery capacity. That is, your battery won’t power your device as long on a given charge. Charging the device in high ambient temperatures can damage it further. Software may limit charging above 80% when the recommended battery temperatures are exceeded. Even storing a battery in a hot environment can damage it irreversibly. When using your device in a very cold environment, you may notice a decrease in battery life, but this condition is temporary. Once the battery’s temperature returns to its normal operating range, its performance will return to normal as well.
+                
+                Text("""
+Your device is designed to perform well in a wide range of ambient temperatures, with 62° to 72° F (16° to 22° C) as the ideal comfort zone. It’s especially important to avoid exposing your device to ambient temperatures higher than 95° F (35° C), which can permanently damage battery capacity. That is, your battery won’t power your device as long on a given charge.
+
+Charging the device in high ambient temperatures can damage it further. Software may limit charging above 80% when the recommended battery temperatures are exceeded. Even storing a battery in a hot environment can damage it irreversibly.
 """)
-            
-            Text("Store it half-charged when you store it long term")
+                
+                Image("ExtremeTemperatures")
+                    .resizable()
+                    .scaledToFit()
+                    .padding(.bottom, 20)
+                }
+                
+                Text("Store it half-charged when you store it long term")
                     .bold()
                     .font(.title2)
-            Text("""
+                Text("""
 If you want to store your device long term, two key factors will affect the overall health of your battery: the environmental temperature and the percentage of charge on the battery when it’s powered down for storage. Therefore, we recommend the following:
 """)
+                    .padding(.bottom, 10)
                 
                 VStack(spacing: 10) {
                     Label(title: {
@@ -59,7 +69,7 @@ If you want to store your device long term, two key factors will affect the over
 struct FirstArticleView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-        FirstArticleView()
+            FirstArticleView()
         }
     }
 }
