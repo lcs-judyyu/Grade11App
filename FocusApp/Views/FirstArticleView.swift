@@ -70,6 +70,8 @@ struct SecondArticleView: View {
 
 struct SecondArticleView_Previews: PreviewProvider {
     static var previews: some View {
+        NavigationView {
         SecondArticleView()
+        }
     }
 }

@@ -45,7 +45,6 @@ struct ContentView: View {
                                label: Text("Picker Name"),
                                content: {
 
-
                         })
                             .pickerStyle(WheelPickerStyle())
                         
