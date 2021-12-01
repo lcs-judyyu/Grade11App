@@ -12,13 +12,13 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-                //fixed header
-                VStack(alignment: .center) {
-                    Text("battery".capitalized(with: .current))
-                        .bold()
-                        .italic()
-                        .font(.title2)
-                }
+            //fixed header
+            VStack(alignment: .center) {
+                Text("battery".capitalized(with: .current))
+                    .bold()
+                    .italic()
+                    .font(.title2)
+            }
             
             ScrollView {
                 
@@ -44,7 +44,7 @@ struct ContentView: View {
                         Picker(selection: $batteryState,
                                label: Text("Picker Name"),
                                content: {
-
+                            
                         })
                             .pickerStyle(WheelPickerStyle())
                         
@@ -52,7 +52,7 @@ struct ContentView: View {
                         DatePicker("Notify at:",
                                    selection: .constant(Date()),
                                    displayedComponents: .hourAndMinute)
-                        .datePickerStyle(.wheel)
+                            .datePickerStyle(.wheel)
                         
                         //information section
                         HStack {
@@ -69,15 +69,15 @@ struct ContentView: View {
                         //first article
                         VStack(alignment: .leading){
                             
-                        Image("Battery")
+                            Image("Battery")
                                 .resizable()
                                 .scaledToFit()
                                 .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
-                        Text("Battery and Performance")
+                            Text("Battery and Performance")
                                 .bold()
                                 .padding(.leading, 20)
                                 .font(.title3)
-                        
+                            
                         }
                         .padding(.bottom, 15)
                         .background(Color.white)
@@ -86,15 +86,16 @@ struct ContentView: View {
                         //second article
                         VStack(alignment: .leading){
                             
-                        Image("Charge")
+                            Image("Charge")
                                 .resizable()
                                 .scaledToFit()
                                 .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
                             
-                        Text("General Performance Tips")
+                            Text("General Performance Tips")
                                 .bold()
+                                .padding(.leading, 20)
                                 .font(.title3)
-                        
+                            
                         }
                         .padding(.bottom, 15)
                         .background(Color.white)
