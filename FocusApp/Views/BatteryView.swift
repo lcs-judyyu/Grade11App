@@ -16,7 +16,7 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            //fixed header
+                //fixed header
                 VStack(alignment: .center) {
                     Text("battery".capitalized(with: .current))
                         .bold()
@@ -106,7 +106,9 @@ struct ContentView: View {
             VStack {
                 Divider()
                     .padding(.bottom, 10)
+                
                 HStack(alignment: .bottom, spacing: 55) {
+                    
                     Image(systemName:"timer")
                         .resizable()
                         .scaledToFit()
