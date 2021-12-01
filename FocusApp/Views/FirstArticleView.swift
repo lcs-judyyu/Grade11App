@@ -7,47 +7,47 @@
 
 import SwiftUI
 
-struct SecondArticleView: View {
+struct FirstArticleView: View {
     var body: some View {
         VStack {
-        
-        VStack(alignment: .center) {
-            Text("Battery and Performance".capitalized(with: .current))
-                .bold()
-                .italic()
-                .font(.title2)
-        }
-        
-        ScrollView {
             
-            ZStack {
-                Color("blueGreen").opacity(0.1)
+            VStack(alignment: .center) {
+                Text("Battery and Performance".capitalized(with: .current))
+                    .bold()
+                    .italic()
+                    .font(.title2)
+            }
+            
+            ScrollView {
                 
-                VStack(alignment: .leading, spacing: 10) {
+                ZStack {
+                    Color("blueGreen").opacity(0.1)
                     
                     VStack(alignment: .leading, spacing: 10) {
                         
-                    Text("About lithium-ion batteries")
-                        .bold()
-                        .font(.title2)
-                    
-                    Text("""
+                        VStack(alignment: .leading, spacing: 10) {
+                            
+                            Text("About lithium-ion batteries")
+                                .bold()
+                                .font(.title2)
+                            
+                            Text("""
     Most phone batteries today use lithium-ion technology. Compared with older generations of battery technology, lithium-ion batteries charge faster, last longer, and have a higher power density for more battery life in a lighter package.
     """)
-                    
-                    Image("Charge2")
-                        .resizable()
-                        .scaledToFit()
-                        .padding(.bottom, 20)
-                    }
-                    
-                    VStack(alignment: .leading, spacing: 10) {
+                            
+                            Image("Charge2")
+                                .resizable()
+                                .scaledToFit()
+                                .padding(.bottom, 20)
+                        }
                         
-                    Text("When batteries chemically age")
-                        .bold()
-                        .font(.title2)
-                    
-                    Text("""
+                        VStack(alignment: .leading, spacing: 10) {
+                            
+                            Text("When batteries chemically age")
+                                .bold()
+                                .font(.title2)
+                            
+                            Text("""
     All rechargeable batteries are consumable components that become less effective as they chemically age.
     
     As lithium-ion batteries chemically age, the amount of charge they can hold diminishes, resulting in shorter amounts of time before a device needs to be recharged. This can be referred to as the battery’s maximum capacity—the measure of battery capacity relative to when it was new. In addition, a battery’s ability to deliver maximum instantaneous performance, or “peak power,” may decrease. In order for a phone to function properly, the electronics must be able to draw upon instantaneous power from the battery.
@@ -58,20 +58,20 @@ struct SecondArticleView: View {
     
     The power management system determines the capability of the battery to supply this power, and manages the loads in order to maintain operations. When the operations can no longer be supported with the full capabilities of the power management system, the system will perform a shutdown to preserve these electronic components.
     """)
-                        .padding(.bottom, 10)
+                                .padding(.bottom, 10)
+                        }
                     }
+                    .padding(.horizontal, 20)
                 }
-                .padding(.horizontal, 20)
             }
         }
     }
-    }
 }
 
-struct SecondArticleView_Previews: PreviewProvider {
+struct FirstArticleView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-        SecondArticleView()
+            FirstArticleView()
         }
     }
 }
