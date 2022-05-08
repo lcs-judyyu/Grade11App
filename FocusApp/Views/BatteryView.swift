@@ -46,13 +46,13 @@ struct ContentView: View {
                                content: {
                             
                         })
-                            .pickerStyle(WheelPickerStyle())
+                        .pickerStyle(WheelPickerStyle())
                         
                         //Second form: time picker
                         DatePicker("Notify at:",
                                    selection: .constant(Date()),
                                    displayedComponents: .hourAndMinute)
-                            .datePickerStyle(.wheel)
+                        .datePickerStyle(.wheel)
                         
                         //information section
                         HStack {
@@ -72,16 +72,25 @@ struct ContentView: View {
                             Image("Battery")
                                 .resizable()
                                 .scaledToFit()
-                                .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
-                            Text("Battery and Performance")
-                                .bold()
-                                .padding(.leading, 20)
-                                .font(.title3)
+                            
+                            Group {
+                                Text("Battery and Performance")
+                                    .bold()
+                                    .font(.title3)
+                                Text("How does your battery work?")
+                                    .foregroundColor(Color.gray)
+                            }
+                            .padding(.leading, 20)
                             
                         }
                         .padding(.bottom, 15)
                         .background(Color.white)
-                        .padding(.bottom, 30)
+                        .cornerRadius(15)
+                        //Source: https://www.appcoda.com/swiftui-card-view/
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 15, style: .continuous)
+                                .stroke(Color(.sRGB, red: 150/255, green: 150/255, blue: 150/255, opacity: 0.1), lineWidth: 1)
+                        )
                         
                         //second article
                         VStack(alignment: .leading){
@@ -89,7 +98,6 @@ struct ContentView: View {
                             Image("Charge")
                                 .resizable()
                                 .scaledToFit()
-                                .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
                             
                             Text("General Performance Tips")
                                 .bold()
@@ -99,7 +107,11 @@ struct ContentView: View {
                         }
                         .padding(.bottom, 15)
                         .background(Color.white)
-                        .padding(.bottom, 30)
+                        .cornerRadius(15)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 15, style: .continuous)
+                                .stroke(Color(.sRGB, red: 150/255, green: 150/255, blue: 150/255, opacity: 0.1), lineWidth: 1)
+                        )
                     }
                     .padding(.horizontal, 20)
                 }

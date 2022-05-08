@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+//Source: https://www.apple.com/ca/batteries/maximizing-performance/
 struct SecondArticleView: View {
     var body: some View {
         VStack {

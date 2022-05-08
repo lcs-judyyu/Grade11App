@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+//Source: https://support.apple.com/en-ca/HT208387#:~:text=As%20lithium%2Dion%20batteries%20chemically,to%20when%20it%20was%20new.
 struct FirstArticleView: View {
     var body: some View {
         VStack {
